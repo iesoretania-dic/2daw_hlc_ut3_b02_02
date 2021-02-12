@@ -60,6 +60,11 @@ class Socio
      */
     private $libros;
 
+    public function __toString()
+    {
+        return $this->getNombre() . ' ' . $this->getApellidos();
+    }
+
     /**
      * @return int
      */

@@ -55,6 +55,12 @@ class Autor
      */
     private $libros;
 
+    public function __toString()
+    {
+        return $this->getNombre() . ' ' . $this->getApellidos();
+    }
+
+
     public function __construct()
     {
         $this->libros = new ArrayCollection();
