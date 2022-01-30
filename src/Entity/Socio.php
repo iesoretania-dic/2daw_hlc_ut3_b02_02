@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -59,6 +60,14 @@ class Socio
      * @var Libro[]|Collection
      */
     private $libros;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->libros = new ArrayCollection();
+    }
 
     /**
      * @return int
